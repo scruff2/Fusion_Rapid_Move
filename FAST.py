@@ -27,7 +27,7 @@
 retractZ = 24.5  # Change this to the value (millimeters) of the Retract height, as you have configured in Fusion 360.
 outputLine = ''
 flag = 0
-f_output = open('output.nc', "w")
+f_output = open('output.nc', 'w')
 with open('input.nc', 'r') as f:
     for line_raw in f:
         if flag == 2:  # Need to add G00 in front of the Z code. Ex.: Z11.846 needs to be G00 Z11.846
@@ -54,5 +54,5 @@ with open('input.nc', 'r') as f:
         else:
             outputLine = line
 
-        f_output.writelines(outputLine + "\n")
+        f_output.writelines(outputLine + '\n')
 f_output.close()
