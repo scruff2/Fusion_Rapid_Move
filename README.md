@@ -20,9 +20,11 @@ If Fusion 360 changes this pattern, then the GCODE output by this software must 
 
 #### **The pattern in the GCODE produced by Fusion is:**
 
-GCODE Line N: Z Retract#  (Example: if 25.4 mm is your RETRACT setup value, this GCODE line will be Z25.4)
-GCODE Line N+1: Anything in this second line, usually X# Y#  (Example X6.953 Y6.564)
-GCODE Line N+2: Z# (Example: Z14.515)
+GCODE Line N: Z Retract#  (Example: if 25.4 mm is your Fusion retract setup value, this GCODE line will be **Z25.4**)
+
+GCODE Line N+1: Anything in this second line, usually X# Y#  (Example: **X6.953 Y6.564**)
+
+GCODE Line N+2: Z# (Example: **Z14.515**)
 
 As this pattern is recognized, this software will add G00 in front of the Z Retract#, then will leave the next GCODE line alone,
 and then will add G01 to the next line (this is the 2nd line after the Retract# was detected)
